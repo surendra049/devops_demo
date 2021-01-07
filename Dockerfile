@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/ubi8/ubi:8.1
 RUN yum --disableplugin=subscription-manager -y install httpd \
   && yum --disableplugin=subscription-manager clean all
 
-#ADD index.html /var/www/html
+ADD index.html /var/www/html
 
 RUN sed -i 's/Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf \
 #  && sed -i 's/listen.acl_users = apache,nginx/listen.acl_users =/' /etc/php-fpm.d/www.conf \
