@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: httpd
-        image: surendra049/httpd
+        image: surendra049/httpd:2
         ports:
         - containerPort: 8080
  
